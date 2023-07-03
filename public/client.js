@@ -5,6 +5,7 @@ const textarea = document.querySelector('#textarea')
 let messageArea = document.querySelector('.message_area')
 let username = document.querySelector('.username')
 let brand = document.querySelector('.brand')
+let btn = document.querySelector('#send')
 
 do{
     name = prompt('enter your name...').trim()
@@ -14,10 +15,21 @@ do{
     brand.appendChild(userDiv) 
 }while(!name)
 
-textarea.addEventListener('keyup',(e)=>{
+// textarea.addEventListener('keyup',(e)=>{
+//     if(e.key==='Enter'){
+//         sendMessage(e.target.value)
+//     }
+// })
+
+document.addEventListener('keyup',(e)=>{
     if(e.key==='Enter'){
+        // console.log(e.target)
         sendMessage(e.target.value)
     }
+})
+
+btn.addEventListener('click',(e)=>{
+        sendMessage(textarea.value)
 })
 
 function sendMessage(message){
