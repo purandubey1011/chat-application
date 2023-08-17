@@ -15,6 +15,7 @@ do{
     brand.appendChild(userDiv) 
 }while(!name)
 
+
 // textarea.addEventListener('keyup',(e)=>{
 //     if(e.key==='Enter'){
 //         sendMessage(e.target.value)
